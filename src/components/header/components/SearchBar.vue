@@ -39,7 +39,7 @@ const props = defineProps({
       padding: 10px 8px;
       border-radius: 8px;
       border: none;
-      width: 690%;
+      width: 200%;
     }
   }
 
@@ -61,6 +61,7 @@ const props = defineProps({
       border-radius: 50%;
       margin-left: 8px;
       object-fit: cover;
+      cursor: pointer;
     }
   }
 }
