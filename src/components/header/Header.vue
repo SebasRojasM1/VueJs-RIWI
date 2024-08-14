@@ -2,6 +2,7 @@
   <header class="header">
     <SearchBar :headerInfo="headerInfo" />
     <Banner :headerInfo="headerInfo" :isConnected="isConnected" @toggleConnection="toggleConnection" />
+    <NavOptions :activePage="activePage" @changePage="changePage" />
   </header>
 </template>
 
@@ -9,6 +10,7 @@
 import { ref, defineProps, defineEmits } from 'vue';
 import SearchBar from './components/SearchBar.vue';
 import Banner from './components/Banner.vue';
+import NavOptions from './components/NavOptions.vue';
 import avatar from "../../assets/images/user.jpg"
 import banner from "../../assets/images/banner.jpg"
 
