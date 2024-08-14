@@ -54,5 +54,14 @@ function changePage(page: string) {
       color: white;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .nav-options{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0;
+    }
+  }
 }
 </style>

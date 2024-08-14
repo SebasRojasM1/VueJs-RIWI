@@ -107,5 +107,33 @@ const props = defineProps({
       color: #8278f0;
     }
   }
+
+
+  @media screen and (max-width: 768px) {
+    .banner{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .profile-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+
+        .profile-details{
+          display: flex;
+          align-items: center;
+          justify-content: center
+        }
+          
+        .connected-button{
+          margin-left: 0;
+        }
+      }
+    }
+  }
 }
 </style>

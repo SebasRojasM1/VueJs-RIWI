@@ -64,5 +64,19 @@ const props = defineProps({
       cursor: pointer;
     }
   }
+
+  
+@media screen and (max-width: 768px) {
+  .header{
+      .navbar{
+        .search-bar{
+          input{
+            width: 260px;
+          }
+        }
+      }
+    }
+  }
+
 }
 </style>
