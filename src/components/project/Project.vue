@@ -396,3 +396,219 @@
   }
 ]);
 </script>
+
+
+
+<style lang="scss" scoped>
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+  
+
+.project-card {
+  background-color: $card-background-color;
+  box-shadow: $card-box-shadow;
+  border-radius: $card-border-radius;
+  overflow: hidden;
+  width: 400px;
+  margin: 16px;
+  padding: 24px;
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .project-head-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h3 {
+        margin: 0;
+        font-size: 18px;
+        color: $color-title-text;
+      }
+
+      p {
+        margin: 0;
+        color: $color-paragraph-text;
+      }
+
+      img{
+        width: 26px;
+        margin-right: 10px;
+      }
+    }
+
+    .card-options {
+      .options-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: $color-title-text;
+      }
+    }
+  }
+
+  .card-body {
+
+    .budget-dates-container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+      padding: 6px 0;
+
+      .budget{
+        display: flex;
+        flex-direction: column;
+        background-color: #f3f3f3;
+        border-radius: 8px;
+        margin: 0;
+        padding: 10px;
+
+        p{
+          margin: 0;
+          padding: 0;
+        }
+
+        p{
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .dates{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .hours{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 6px 0 8px;
+      color: $color-paragraph-text;
+
+      .days-left {
+        background-color: $green-background-color;
+        color: $green-font-color;
+        font-weight: bold;
+        font-size: 13px;
+        padding: 4px 8px;
+        border-radius: 4px;
+      }
+    }
+
+    .tasks {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0 12px;
+
+      p {
+        margin: 0;
+        color: $color-paragraph-text;
+        font-size: 14px;
+      }
+    }
+
+    .dates {
+      display: flex;
+      justify-content: space-between;
+      margin: 1px 0;
+
+      p {
+        margin: 0;
+        color: $color-paragraph-text;
+      }
+    }
+
+    .description {
+      color: $color-paragraph-text;
+      margin: 8px 0 24px;
+    }
+
+    .progress-bar {
+      background-color: $gray-background-color;
+      border-radius: 8px;
+      height: 8px;
+      margin: 16px 0;
+      overflow: hidden;
+
+      .progress {
+        background-color: $color-button-principal;
+        height: 100%;
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .team {
+        display: flex;
+        align-items: center;
+
+        .avatar {
+          width: 30px;
+          border-radius: 50%;
+          border: 2px solid $card-background-color;
+          margin-right: 4px;
+
+          &:nth-child(2){
+            position: relative;
+            right: 17px;
+          }
+
+          &:nth-child(3){
+            position: relative;
+            right: 32px;
+          }
+        }
+
+        p {
+          margin: 0;
+          color: $color-paragraph-text;
+        }
+      }
+
+      .comments {
+        p {
+          margin: 0;
+          color: $color-paragraph-text;
+        }
+      }
+    }
+  }
+
+.project-options-menu {
+  position: relative;
+  left: 0px;
+  top: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.project-options-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.project-options-menu li:hover {
+  background-color: #f0f0f0;
+}
+}
+</style>

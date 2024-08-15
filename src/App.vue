@@ -6,7 +6,7 @@
     <main>
       <Profile v-if="activePage === 'profile'" />
       <Team v-if="activePage === 'team'" />
-      <Project v-if="activePage === 'project'" />
+      <Project v-if="activePage === 'projects'" />
     </main>
   </div>
 </template>
