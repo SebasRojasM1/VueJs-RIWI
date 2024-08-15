@@ -208,3 +208,169 @@ const filteredProjects = computed(() => {
   );
 });
 </script>
+
+
+
+<style lang="scss" scoped>
+  @import '../../../assets/styles/mixins';
+  @import '../../../assets/styles/variables';
+  
+.project-table {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  grid-column: span 3 / span 4;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 11px;
+  
+  h2{
+    font-size: 18px;
+    padding: 0;
+    margin: 0
+  }
+
+  input{
+    padding: 8px 25px;
+    margin: 0;
+    border: #e0e0e0 solid 1px;
+    border-radius: 5px;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  font-size: 16px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 10px;
+  border-top: 1px solid #f5f5f5;
+
+  &:nth-child(2) {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    .project-info{
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+
+      h4, p{
+        margin: 8px 12px;
+      }
+
+      p{
+        font-size: 13px;
+      }
+    }
+    
+    img{
+      width: 28px;
+    }
+  }
+
+
+  &:nth-child(6) {
+    text-align: center;
+    font-size: 25px;
+    background-color: none;
+  } 
+
+  button{
+    background: none;
+    border: none;
+    font-size: 23px;
+    position: relative;
+    right: 30px;
+  }
+}
+
+.team{
+  display: flex;
+  align-items: center;
+
+  img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+  border: white solid 2px;
+
+    &:nth-child(2){
+      position: relative;
+      right: 17px;
+    }
+
+    &:nth-child(3){
+      position: relative;
+      right: 34px;
+    }
+  }
+
+  span{
+    background-color: #eeeeef;
+    border-radius: 50%;
+    padding: 5px;
+    position: relative;
+    right: 51px;
+  }
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress-bar {
+  width: 70%;
+  height: 8px;
+  background-color: $color-button-principal;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pagination-buttons {
+  button {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+
+    &.active {
+      background-color: $color-button-principal;
+      color: white;
+    }
+
+    &:disabled {
+      background-color: #e0e0e0;
+    }
+  }
+}
+</style>
