@@ -200,4 +200,61 @@ function toggleFavorite(teamId: number) {
 
 
 
+const activeMenuId = ref<number | null>(null);
+
+function toggleMenu(teamId: number) {
+  activeMenuId.value = activeMenuId.value === teamId ? null : teamId;
+}
+
+function hideMenu(teamId: number) {
+  if (activeMenuId.value === teamId) {
+    activeMenuId.value = null;
+  }
+}
+
+function isMenuVisible(teamId: number) {
+  return activeMenuId.value === teamId;
+}
+
+function editTeam(teamId: number) {
+  const team = teams.value.find(t => t.id === teamId);
+  if (team) {
+    const updatedName = prompt("Edit team name:", team.name);
+    const updatedDescription = prompt("Edit team description:", team.description);
+
+    if (updatedName && updatedDescription) {
+      team.name = updatedName;
+      team.description = updatedDescription;
+      console.log(`El equipo con ID: ${teamId} ha sido actualizado.`);
+    }
+  }
+}
+
+function deleteTeam(teamId: number) {
+  const team = teams.value.find(t => t.id === teamId);
+  if (team) {
+    const confirmDelete = confirm(`¿Estás seguro de que deseas eliminar el equipo "${team.name}"?`);
+    if (confirmDelete) {
+      teams.value = teams.value.filter(t => t.id !== teamId);
+      console.log(`El equipo con ID: ${teamId} ha sido eliminado.`);
+    }
+  }
+}
+
+function addMember(teamId: number) {
+  const team = teams.value.find(t => t.id === teamId);
+  if (team) {
+    const memberName = prompt("Nombre del nuevo integrante:");
+    const memberRole = prompt("Rol del nuevo integrante:");
+    const memberAvatar = prompt("URL de la fotografía del integrante:");
+
+    if (memberName && memberRole && memberAvatar) {
+      const newMemberId = team.members.length + 1;
+      const newMember = { id: newMemberId, name: memberName, role: memberRole, avatar: memberAvatar };
+      team.members.push(newMember);
+      console.log(`Nuevo integrante agregado al equipo con ID: ${teamId}.`);
+    }
+  }
+}
+
 </script>
