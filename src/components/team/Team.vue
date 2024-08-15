@@ -190,4 +190,14 @@ const teams = ref([
     isFavorite: false,
   }
 ]);
+
+function toggleFavorite(teamId: number) {
+  const team = teams.value.find(t => t.id === teamId);
+  if (team) {
+    team.isFavorite = !team.isFavorite;
+  }
+}
+
+
+
 </script>
