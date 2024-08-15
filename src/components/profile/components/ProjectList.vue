@@ -70,3 +70,110 @@
       </div>
     </div>
 </template>
+
+
+<script setup lang="ts">
+import { ref, computed } from 'vue';
+
+  import male1 from '../../../assets/images/male1.jpg'
+  import male2 from '../../../assets/images/male2.jpg'
+  import female2 from '../../../assets/images/female2.jpg'
+  import female3 from '../../../assets/images/female3.jpg'
+  import male4 from '../../../assets/images/male4.jpg'
+  import male5 from '../../../assets/images/user.jpg'
+  import female5 from '../../../assets/images/female5.jpg'
+
+  import reactLogo from '../../../assets/images/logos/react.png'
+  import figmaLogo from '../../../assets/images/logos/figma.png'
+  import pythonLogo from '../../../assets/images/logos/python.webp'
+  import xamarinLogo from '../../../assets/images/logos/xamarin.png'
+  import vuejsLogo from '../../../assets/images/logos/vuejs.png'
+
+
+const projects = ref([
+  {
+    id: 1,
+    name: 'BGC eCommerce App',
+    technology: 'React',
+    icon: reactLogo,
+    leader: 'Eileen',
+    team: [
+      { avatar: male1 },
+      { avatar: male2 },
+      { avatar: female3 },
+    ],
+    extraMembers: 3,
+    progress: 78,
+  },
+  {
+    id: 2,
+    name: 'Falcon Logo Design',
+    technology: 'Figma',
+    icon: figmaLogo,
+    leader: 'Owen',
+    team: [
+      { avatar: female5 },
+      { avatar: male4 },
+      { avatar: male1 },
+    ],
+    extraMembers: 0,
+    progress: 25,
+  },
+  {
+    id: 3,
+    name: 'Dashboard Design',
+    technology: 'Vuejs',
+    icon: vuejsLogo,
+    leader: 'Keith',
+    team: [
+      { avatar: male5 },
+      { avatar: female5 },
+      { avatar: male4 },
+    ],
+    extraMembers: 0,
+    progress: 62,
+  },
+  {
+    id: 4,
+    name: 'Foodista mobile app',
+    technology: 'Xamarin',
+    icon: xamarinLogo,
+    leader: 'Merline',
+    team: [
+      { avatar: female5 },
+      { avatar: male1 },
+      { avatar: male2 },
+    ],
+    extraMembers: 8,
+    progress: 8,
+  },
+  {
+    id: 5,
+    name: 'Dojo Email App',
+    technology: 'Python',
+    icon: pythonLogo,
+    leader: 'Harmonia',
+    team: [
+      { avatar: male5 },
+      { avatar: female2 },
+      { avatar: female3 },
+    ],
+    extraMembers: 5,
+    progress: 51,
+  },{
+    id: 6,
+    name: 'Python Magic App',
+    technology: 'Python',
+    icon: pythonLogo,
+    leader: 'Harmonia',
+    team: [
+      { avatar: male5 },
+      { avatar: female2 },
+      { avatar: male4 },
+    ],
+    extraMembers: 5,
+    progress: 51,
+  },
+]);
+
+</script>
