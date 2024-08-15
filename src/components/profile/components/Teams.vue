@@ -76,3 +76,116 @@
   }
 ])
 </script>
+
+
+<style lang="scss" scoped>
+  @import '../../../assets/styles/mixins';
+  @import '../../../assets/styles/variables';
+  
+  .teams {
+    grid-column: span 2 / span 2;
+    grid-row: span 1 / span 1; // Ocupa solo la fila 3
+    grid-column-start: 4; // Comienza en la columna 4
+    grid-row-start: 2; // Comienza en la fila 3
+    background-color: $card-background-color;
+    border-radius: $card-border-radius;
+    box-shadow: $card-box-shadow;
+    padding: 20px;
+    color: $color-paragraph-text;
+
+    .head-section{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h3 {
+        color: $color-title-text;
+        font-weight: bold;
+        margin-left: 10px;
+      } 
+
+      p{
+        color: $color-title-text;
+        font-weight: bold;
+        font-size: 21px;
+        margin-right: 38px;      
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .team-item {
+        margin: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .team-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .img-team img{
+            width: 30px;
+            margin-right: 10px
+          }
+
+          .info-team{
+            margin: 0;
+
+            .team-name {
+              font-weight: bold;
+              font-size: 17px;
+              margin: 0;
+            }
+
+            .team-number-members {
+                font-size: 15px;
+                margin: 3px 0 0;
+                color: $color-paragraph-text;
+              }
+            }
+          }
+
+          .team-assignation p{
+            padding: 5px 12px;
+            text-align: center;
+            border-radius: 5px ;
+            font-weight: bold;
+
+            &.developer {
+              background-color: $red-background-color;
+              color: $red-font-color;
+            }
+
+            &.support {
+              background-color: $purple-background-color;
+              color: $purple-font-color;
+            }
+
+            &.designer {
+              background-color: $blue-background-color;
+              color: $blue-font-color;
+            }
+
+            &.marketing {
+              background-color: $gray-background-color;
+              color: $gray-font-color;
+            }
+          }
+        }
+      }
+
+      a{
+        @include flex-center;
+        text-decoration: none;
+        color: $purple-font-color;
+        font-weight: 600;
+        margin-top: 10px;
+        font-size: 17px;
+      }
+    }
+</style>
