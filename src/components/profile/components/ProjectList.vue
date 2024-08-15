@@ -362,6 +362,7 @@ td {
     padding: 5px 10px;
     margin-right: 5px;
     border-radius: 5px;
+    cursor: pointer;
 
     &.active {
       background-color: $color-button-principal;
