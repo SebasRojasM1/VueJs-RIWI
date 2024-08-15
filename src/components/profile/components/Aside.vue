@@ -42,5 +42,32 @@
   @import '../../../assets/styles/mixins';
   @import '../../../assets/styles/variables';
   
+.aside {
+  grid-row: span 4 / span 4; // Ocupa todas las filas
+  grid-column: span 1 / span 1; // Ocupa la primera columna
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
+  .about,
+  .overview {
+    background-color: $card-background-color;
+    border-radius: $card-border-radius;
+    box-shadow: $card-box-shadow;
+    padding: 20px;
+    color: $color-paragraph-text;
+
+    h3 {
+      color: $color-title-text;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      margin-top: 15px;
+      font-weight: bold;
+      color: $color-title-text;
+    }
+  }
+}
   </style>
