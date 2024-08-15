@@ -47,3 +47,87 @@
       </div>
     </div>
   </template>
+
+
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import male1 from "../../assets/images/male1.jpg"
+import female1 from "../../assets/images/female1.jpg"
+import male2 from "../../assets/images/male2.jpg"
+import female2 from "../../assets/images/female2.jpg"
+import male3 from "../../assets/images/male3.jpg"
+import female3 from "../../assets/images/female3.jpg"
+
+
+// Lista de usuarios
+const users = ref([
+  {
+    id: 1,
+    name: 'Mark Gilbert',
+    role: 'UI Designer',
+    avatar: male1,
+    tags: ['Figma', 'Sketch'],
+    projects: 18,
+    tasks: 834,
+    connections: 129,
+    isConnected: true
+  },
+  {
+    id: 2,
+    name: 'Eugenia Parsons',
+    role: 'Developer',
+    avatar: female1,
+    tags: ['Angular', 'React'],
+    projects: 112,
+    tasks: 2310,
+    connections: 1280,
+    isConnected: false
+  },
+  {
+    id: 3,
+    name: 'Francis Byrd',
+    role: 'Developer',
+    avatar: male2,
+    tags: ['HTML', 'React'],
+    projects: 32,
+    tasks: 1250,
+    connections: 890,
+    isConnected: false
+  },
+  {
+    id: 4,
+    name: 'Leon Lucas',
+    role: 'UI/UX Designer',
+    avatar: female2,
+    tags: ['Figma', 'Sketch', "Photoshop"],
+    projects: 86,
+    tasks: 12400,
+    connections: 890,
+    isConnected: false
+  },
+  {
+    id: 5,
+    name: 'Jayden Rogers',
+    role: 'Full Stack Developer',
+    avatar: male3,
+    tags: [ 'React', 'HTML', "NodeJs"],
+    projects: 244,
+    tasks: 23800,
+    connections: 2140,
+    isConnected: true
+  },
+  {
+    id: 6,
+    name: 'Jeanetter Powell',
+    role: 'SEO',
+    avatar: female3,
+    tags: ['Analysis', 'Writing'],
+    projects: 32,
+    tasks: 1280,
+    connections: 1270,
+    isConnected: false
+  }
+]);
+
+</script>
