@@ -4,6 +4,7 @@
       <ActivityTimeline />
       <Connections />
       <Teams />
+      <ProjectList />
     </div>
 </template>
   
@@ -12,6 +13,7 @@
   import ActivityTimeline from './components/ActivityTimeline.vue';
   import Connections from './components/Connections.vue';
   import Teams from './components/Teams.vue';
+  import ProjectList from './components/ProjectList.vue';
 </script>
   
 <style lang="scss" scoped>
