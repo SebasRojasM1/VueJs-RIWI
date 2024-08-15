@@ -57,9 +57,7 @@ function changePage(page: string) {
 
   @media screen and (max-width: 768px) {
     .nav-options{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center;
       margin-right: 0;
     }
   }
