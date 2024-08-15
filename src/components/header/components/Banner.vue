@@ -109,24 +109,18 @@ const props = defineProps({
   }
 
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .banner{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center;
       flex-direction: column;
 
       .profile-info{
-        display: flex;
+        @include flex-center;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         padding-bottom: 20px;
 
         .profile-details{
-          display: flex;
-          align-items: center;
-          justify-content: center
+          @include flex-center
         }
           
         .connected-button{

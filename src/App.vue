@@ -4,6 +4,8 @@
     <Header :activePage="activePage" @changePage="setActivePage" />
 
     <main>
+      <Profile v-if="activePage === 'profile'" />
+      <Team v-if="activePage === 'team'" />
     </main>
   </div>
 </template>
@@ -11,6 +13,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Header from './components/header/Header.vue';
+import Profile from './components/profile/Profile.vue';
+import Team from './components/team/Team.vue';
 
 const activePage = ref('profile'); // Página inicial por defecto
 
