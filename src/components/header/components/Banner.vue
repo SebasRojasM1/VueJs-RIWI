@@ -109,7 +109,7 @@ const props = defineProps({
   }
 
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .banner{
       @include flex-center;
       flex-direction: column;
