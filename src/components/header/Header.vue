@@ -51,5 +51,50 @@ function changePage(page: string) {
 
 .header {
   min-width: 100%;
+
+  @media screen and (max-width: 768px) {
+    .header{
+
+      .navbar{
+        .search-bar{
+          input{
+            width: 260px;
+          }
+        }
+      }
+
+      .banner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .profile-info{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-bottom: 20px;
+
+          .profile-details{
+            display: flex;
+            align-items: center;
+            justify-content: center
+          }
+          
+          .connected-button{
+            margin-left: 0;
+          }
+        }
+      }
+
+      .nav-options{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+      }
+    }
+  }
 }
 </style>

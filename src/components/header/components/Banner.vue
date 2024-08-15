@@ -107,9 +107,9 @@ const props = defineProps({
       color: #8278f0;
     }
   }
+}
 
-
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .banner{
       @include flex-center;
       flex-direction: column;
@@ -129,5 +129,4 @@ const props = defineProps({
       }
     }
   }
-}
 </style>

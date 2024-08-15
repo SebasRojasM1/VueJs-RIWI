@@ -54,12 +54,12 @@ function changePage(page: string) {
       color: white;
     }
   }
+}
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .nav-options{
       @include flex-center;
       margin-right: 0;
     }
   }
-}
 </style>
