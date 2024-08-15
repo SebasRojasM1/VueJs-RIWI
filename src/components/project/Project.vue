@@ -88,6 +88,50 @@
   import adobeXdLogo from '../../assets/images/logos/adobe-xd.png'
   import htmlLogo from '../../assets/images/logos/html.png'
 
+
+    const activeMenuId = ref<number | null>(null);
+
+    function toggleMenu(projectId: number) {
+    activeMenuId.value = activeMenuId.value === projectId ? null : projectId;
+    }
+
+    function hideMenu(projectId: number) {
+    if (activeMenuId.value === projectId) {
+        activeMenuId.value = null;
+    }
+    }
+
+    function isMenuVisible(projectId: number) {
+    return activeMenuId.value === projectId;
+    }
+
+    function editProject(projectId: number) {
+    const project = projects.value.find(p => p.id === projectId);
+    if (project) {
+        const updatedTask = prompt("Edit task done:", project.tasks.completed);
+        const updatedPercentage = prompt("Edit project percentage:", project.tasks.percentage);
+
+        if (updatedTask && updatedPercentage) {
+        project.tasks.completed = updatedTask;
+        project.tasks.percentage = updatedPercentage;
+        console.log(`El equipo con ID: ${projectId} ha sido actualizado.`);
+        }
+    }
+    }
+
+    function deleteProject(projectId: number) {
+    const project = projects.value.find(t => t.id === projectId);
+    if (project) {
+        const confirmDelete = confirm(`¿Estás seguro de que deseas eliminar el proyecto "${project.name}"?`);
+        
+        if (confirmDelete) {
+        projects.value = projects.value.filter(t => t.id !== projectId);
+        console.log(`El proyecto con ID: ${projectId} ha sido eliminado.`);
+        }
+    }
+    }
+
+
   const projects = ref([
     {
     id: 1,
