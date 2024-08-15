@@ -3,6 +3,7 @@
       <Aside />
       <ActivityTimeline />
       <Connections />
+      <Teams />
     </div>
 </template>
   
@@ -10,7 +11,7 @@
   import Aside from './components/Aside.vue';
   import ActivityTimeline from './components/ActivityTimeline.vue';
   import Connections from './components/Connections.vue';
-
+  import Teams from './components/Teams.vue';
 </script>
   
 <style lang="scss" scoped>
