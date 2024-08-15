@@ -89,6 +89,28 @@ import { ref, computed } from 'vue';
   import xamarinLogo from '../../../assets/images/logos/xamarin.png'
   import vuejsLogo from '../../../assets/images/logos/vuejs.png'
 
+    const searchQuery = ref<string>('');
+    const currentPage = ref<number>(1);
+    const itemsPerPage = 5;
+
+const totalItems = computed(() => projects.value.length);
+const totalPages = computed(() => Math.ceil(totalItems.value / itemsPerPage));
+
+const goToPage = (page: number) => {
+  currentPage.value = page;
+};
+
+const previousPage = () => {
+  if (currentPage.value > 1) {
+    currentPage.value--;
+  }
+};
+
+const nextPage = () => {
+  if (currentPage.value < totalPages.value) {
+    currentPage.value++;
+  }
+};
 
 const projects = ref([
   {
