@@ -2,12 +2,14 @@
     <div class="profile-container">
       <Aside />
       <ActivityTimeline />
+      <Connections />
     </div>
 </template>
   
 <script setup lang="ts">
   import Aside from './components/Aside.vue';
   import ActivityTimeline from './components/ActivityTimeline.vue';
+  import Connections from './components/Connections.vue';
 
 </script>
   
