@@ -43,24 +43,24 @@
 
 <script setup lang="ts">
   import { ref } from 'vue';
-  import male1 from "../assets/images/male1.jpg"
-  import female1 from "../assets/images/female1.jpg"
-  import male2 from "../assets/images/male2.jpg"
-  import female2 from "../assets/images/female2.jpg"
-  import male3 from "../assets/images/male3.jpg"
-  import female3 from "../assets/images/female3.jpg"
-  import male4 from "../assets/images/male4.jpg"
-  import female4 from "../assets/images/female3.jpg"
-  import male5 from "../assets/images/user.jpg"
-  import female5 from "../assets/images/female5.jpg"
+  import male1 from '../../assets/images/male1.jpg'
+  import female1 from '../../assets/images/female1.jpg'
+  import male2 from '../../assets/images/male2.jpg'
+  import female2 from '../../assets/images/female2.jpg'
+  import male3 from '../../assets/images/male3.jpg'
+  import female3 from '../../assets/images/female3.jpg'
+  import male4 from '../../assets/images/male4.jpg'
+  import female4 from '../../assets/images/female3.jpg'
+  import male5 from '../../assets/images/user.jpg'
+  import female5 from '../../assets/images/female5.jpg'
 
-  import reactLogo from "../assets/images/logos/react.png"
-  import figmaLogo from "../assets/images/logos/figma.png"
-  import calendarLogo from "../assets/images/logos/google-calendar.webp"
-  import vuejsLogo from "../assets/images/logos/vuejs.png"
-  import worldLogo from "../assets/images/logos/worls.png"
-  import adobeXdLogo from "../assets/images/logos/adobe-xd.png"
-  import htmlLogo from "../assets/images/logos/html.png"
+  import reactLogo from '../../assets/images/logos/react.png'
+  import figmaLogo from '../../assets/images/logos/figma.png'
+  import calendarLogo from '../../assets/images/logos/google-calendar.webp'
+  import vuejsLogo from '../../assets/images/logos/vuejs.png'
+  import worldLogo from '../../assets/images/logos/worls.png'
+  import adobeXdLogo from '../../assets/images/logos/adobe-xd.png'
+  import htmlLogo from '../../assets/images/logos/html.png'
 
 const teams = ref([
   {
@@ -256,5 +256,183 @@ function addMember(teamId: number) {
     }
   }
 }
-
 </script>
+
+
+<style lang="scss" scoped>
+  @import '../../assets/styles/mixins';
+  @import '../../assets/styles/variables';
+  
+  .team-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .team-card {
+      @include card;
+      max-width: 400px;
+      min-width: 400px;
+  
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      .team-principal{
+        display: flex;
+        align-items: center;
+
+        h2{
+          font-size: 18px;
+        }
+
+        .team-icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+        }
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+  
+        .star-button, .menu-button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          margin-left: 8px;
+          font-size: 18px;
+          transition: 0.3s ease;
+
+
+          &.favorite {
+            color: gold;
+          }
+        }
+      }
+    }
+  
+    .description {
+      margin: 8px 0;
+      color: #555;
+    }
+
+    .team-info{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+
+      .members {
+      display: flex;
+      margin: 8px 0;
+  
+        .member-avatar {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          margin-right: 4px;
+          border: 2px solid white;
+
+          &:nth-child(2){
+            position: relative;
+            right: 17px;
+          }
+
+          &:nth-child(3){
+            position: relative;
+            right: 34px;
+          }
+
+          &:nth-child(4){
+            position: relative;
+            right: 51px;
+          }
+
+          
+          &:nth-child(5){
+            position: relative;
+            right: 68px;
+          }
+
+          
+          &:nth-child(6){
+            position: relative;
+            right: 85px;
+          }
+
+          &:nth-child(7){
+            position: relative;
+            right: 102px;
+          }
+        }
+      }
+  
+      .tags {
+        display: flex;
+        margin-top: 8px;
+    
+        .tag {
+          background-color: #e0e0e0;
+          border-radius: 6px;
+          padding: 5px 9px;
+          margin-right: 9px;
+          font-size: 13px;
+          font-weight: bold;
+
+          &.tag-vuejs, &.tag-email, &.tag-hubilo, &.tag-ui-ux {
+            background-color: $green-background-color;
+            color: $green-font-color;
+          }
+          &.tag-developer, &.tag-xd {
+            background-color: $red-background-color;
+            color: $red-font-color;
+          }
+          &.tag-react, &.tag-twitter {
+            background-color: $purple-background-color;
+            color: $purple-font-color;
+          }
+          &.tag-mui, &.tag-zendesk , &.tag-mui {
+            background-color: $blue-background-color;
+            color: $blue-font-color;
+          }
+          &.tag-sketch, &.tag-html{
+            background-color: $yellow-background-color;
+            color: $yellow-font-color;
+          }
+          &.tag-figma {
+            background-color: $gray-background-color;
+            color: $gray-font-color;
+          }
+        }
+      }
+    }
+  }
+
+  .team-options-menu {
+    position: relative;
+    left: 0px;
+    top: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+  }
+
+  .team-options-menu li {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .team-options-menu li:hover {
+    background-color: #f0f0f0;
+  }
+}
+</style>
+  
