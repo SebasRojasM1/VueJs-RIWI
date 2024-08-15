@@ -59,6 +59,13 @@ import female2 from "../../assets/images/female2.jpg"
 import male3 from "../../assets/images/male3.jpg"
 import female3 from "../../assets/images/female3.jpg"
 
+function toggleConnected(userId: number) {
+  const user = users.value.find(u => u.id === userId);
+
+  if (user) {
+    user.isConnected = !user.isConnected;
+  }
+}
 
 // Lista de usuarios
 const users = ref([
