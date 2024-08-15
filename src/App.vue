@@ -6,6 +6,7 @@
     <main>
       <Profile v-if="activePage === 'profile'" />
       <Team v-if="activePage === 'team'" />
+      <Project v-if="activePage === 'project'" />
     </main>
   </div>
 </template>
@@ -15,6 +16,8 @@ import { ref } from 'vue';
 import Header from './components/header/Header.vue';
 import Profile from './components/profile/Profile.vue';
 import Team from './components/team/Team.vue';
+import Project from './components/project/Project.vue';
+
 
 const activePage = ref('profile'); // Página inicial por defecto
 
