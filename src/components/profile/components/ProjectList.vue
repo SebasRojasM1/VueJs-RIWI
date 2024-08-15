@@ -89,9 +89,9 @@ import { ref, computed } from 'vue';
   import xamarinLogo from '../../../assets/images/logos/xamarin.png'
   import vuejsLogo from '../../../assets/images/logos/vuejs.png'
 
-    const searchQuery = ref<string>('');
-    const currentPage = ref<number>(1);
-    const itemsPerPage = 5;
+const searchQuery = ref<string>('');
+const currentPage = ref<number>(1);
+const itemsPerPage = 5;
 
 const totalItems = computed(() => projects.value.length);
 const totalPages = computed(() => Math.ceil(totalItems.value / itemsPerPage));
@@ -198,4 +198,13 @@ const projects = ref([
   },
 ]);
 
+const filteredProjects = computed(() => {
+  const filtered = projects.value.filter((project) =>
+    project.name.toLowerCase().includes(searchQuery.value.toLowerCase())
+  );
+  return filtered.slice(
+    (currentPage.value - 1) * itemsPerPage,
+    currentPage.value * itemsPerPage
+  );
+});
 </script>
