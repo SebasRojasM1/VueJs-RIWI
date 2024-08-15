@@ -138,3 +138,159 @@ const users = ref([
 ]);
 
 </script>
+
+
+<style lang="scss" scoped>
+    @import '../../assets/styles/mixins';
+    @import '../../assets/styles/variables';
+  
+  .connection-card {
+    background-color: $card-background-color;
+    box-shadow: $card-box-shadow;
+    border-radius: $card-border-radius;
+    overflow: hidden;
+    width: 350px;
+    text-align: center;
+    margin: 16px;
+  
+    .card-options{
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      position: relative;
+      top: 12px;
+      right: 13px;
+
+      button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 21px;
+      }
+    }
+
+    .card-header {
+      padding: 16px;
+      
+
+      .avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 4px solid $card-background-color;
+        object-fit: cover;
+      }
+    }
+  
+    .card-body {
+      padding: 16px;
+  
+      h3 {
+        margin: 0;
+        font-size: 20px;
+        color: $color-title-text;
+      }
+  
+      p {
+        margin: 8px 0;
+        color: $color-paragraph-text;
+      }
+  
+      .tags {
+        margin: 16px 0;
+
+        .tag {
+          display: inline-block;
+          background-color: $gray-background-color;
+          color: $gray-font-color;
+          font-size: 13px;
+          align-items: center;
+          padding: 4px 8px;
+          border-radius: 5px;
+          margin: 4px;
+          font-weight: bold;
+
+          &.tag-vuejs, &.tag-email, &.tag-hubilo, &.tag-ui-ux, &.tag-writing, &.tag-nodejs {
+            background-color: $green-background-color;
+            color: $green-font-color;
+          }
+          &.tag-developer, &.tag-xd, &.tag-angular {
+            background-color: $red-background-color;
+            color: $red-font-color;
+          }
+          &.tag-react, &.tag-photoshop {
+            background-color: $purple-background-color;
+            color: $purple-font-color;
+          }
+          &.tag-mui, &.tag-zendesk {
+            background-color: $blue-background-color;
+            color: $blue-font-color;
+          }
+          &.tag-sketch, &.tag-html{
+            background-color: $yellow-background-color;
+            color: $yellow-font-color;
+          }
+          &.tag-figma, &.tag-analysis {
+            background-color: $gray-background-color;
+            color: $gray-font-color;
+          }
+        }
+      }
+  
+      .stats {
+        display: flex;
+        justify-content: space-around;
+        margin: 16px 0;
+  
+        .stat {
+          h4 {
+            margin: 0;
+            font-size: 18px;
+            color: $color-title-text;
+          }
+  
+          p {
+            margin: 0;
+            color: $color-paragraph-text;
+          }
+        }
+      }
+  
+      .actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+  
+        .connected-button {
+          background-color: $color-button-principal;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          margin-right: 15px;
+          padding: 8px 16px;
+          cursor: pointer;
+          transition: 0.3s ease;
+        }
+
+        .connected {
+          background-color: $color-button-principal;
+        }
+
+        .disconnected {
+          background-color: $color-button-secundary;
+          color: #8278f0;
+        }
+  
+        .message-button {
+          background-color: $background-color;
+          color: $color-title-text;
+          border: none;
+          border-radius: 6px;
+          padding: 8px 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+</style>
+  
