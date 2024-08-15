@@ -1,11 +1,13 @@
 <template>
     <div class="profile-container">
       <Aside />
+      <ActivityTimeline />
     </div>
 </template>
   
 <script setup lang="ts">
   import Aside from './components/Aside.vue';
+  import ActivityTimeline from './components/ActivityTimeline.vue';
 
 </script>
   
